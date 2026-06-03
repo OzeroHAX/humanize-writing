@@ -1,0 +1,31 @@
+{
+  "name": "@ozerohax/humanize-writing",
+  "version": "2.0.0",
+  "description": "A multi-agent skill that rewrites AI-generated English and Russian text into sharper, less robotic prose.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node install-skill.js",
+    "preuninstall": "node uninstall-skill.js"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "agent",
+    "writing",
+    "humanize",
+    "ai-detection"
+  ],
+  "author": "OzeroHAX",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OzeroHAX/humanize-writing.git"
+  },
+  "files": [
+    "SKILL.md",
+    "references/",
+    "install.sh",
+    "install-skill.js",
+    "uninstall-skill.js"
+  ]
+}
