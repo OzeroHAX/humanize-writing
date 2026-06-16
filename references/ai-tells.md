@@ -291,6 +291,14 @@ AI makes every bullet point the same grammatical structure and similar length.
 
 **Fix:** End with one strong statement, not a perfectly balanced assessment.
 
+### Raw Notes Masquerading as a Post
+
+Long drafts often preserve the author's working order instead of the reader's path. The result is repeated "main takeaway," "practical conclusion," and "final recommendation" blocks that say the same thing three times.
+
+**Fix:** Rebuild the piece around one claim. For posts and reports, a useful default shape is: hook -> context -> evidence -> tradeoffs -> practical rule -> ending. Group observations by role, model, product, person, decision rule, or scenario. Do not preserve chronology just because the source was written in that order.
+
+When borrowing structure from another draft, keep the stronger organization but remove overclaims, hype, emojis, and unsupported certainty.
+
 ### Em Dash Usage
 
 The tell is both frequency and function. Count before flagging -- don't assume density from a general impression.

@@ -12,7 +12,7 @@ Without flags, the installer asks which agent to install for.
 
 Targets:
   --factory  ~/.factory/skills/humanize-writing
-  --codex    ~/.agents/skills/humanize-writing
+  --codex    ~/.codex/skills/humanize-writing
   --claude   ~/.claude/skills/humanize-writing
   --all      Install to all supported targets
 EOF
@@ -21,7 +21,7 @@ EOF
 target_dir() {
   case "$1" in
     factory) printf '%s\n' "$HOME/.factory/skills/$SKILL_NAME" ;;
-    codex) printf '%s\n' "$HOME/.agents/skills/$SKILL_NAME" ;;
+    codex) printf '%s\n' "$HOME/.codex/skills/$SKILL_NAME" ;;
     claude) printf '%s\n' "$HOME/.claude/skills/$SKILL_NAME" ;;
     *) printf 'Unknown target: %s\n' "$1" >&2; exit 1 ;;
   esac

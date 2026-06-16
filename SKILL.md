@@ -1,11 +1,11 @@
 ---
 name: humanize-writing
-version: 2.0.0
 description: |
   Remove signs of AI-generated writing from text. Use when the user mentions
   'sounds like AI,' 'too robotic,' 'humanize this,' 'make it sound human,'
   'de-AI this,' 'sounds like ChatGPT,' 'make it natural,' or 'doesn't sound
-  like a person wrote it.' Detects and fixes AI writing patterns including
+  like a person wrote it.' Also use for posts, articles, and reports that need
+  structural editing before line editing. Detects and fixes AI writing patterns including
   inflated significance, promotional language, formulaic structure, AI vocabulary,
   superficial analyses, vague attributions, hedging, robotic rhythm, em dash and
   boldface overuse, chatbot artifacts, and missing personality. Based on
@@ -65,6 +65,25 @@ Ask internally:
 - What must not be added: invented sources, fabricated examples, fake first-person experience, unsupported claims?
 
 For Russian text, also decide whether the problem is канцелярит, рекламная пустота, нейросетевой нейтралитет, однообразный ритм, or over-polished assistant tone. Fix the actual problem; do not make every Russian text conversational.
+
+---
+
+### Pass 0.5: Rebuild Structure When the Draft Is Raw
+
+If the text reads like notes, a report dump, or several repeated conclusions stitched together, fix the structure before fixing sentences.
+
+Use this for posts, articles, reports, and long-form updates. Do not use it for short replies, UI copy, or documents where the user-provided template must be preserved.
+
+**What to do:**
+- Extract the main claim in one sentence.
+- Choose a reader path: hook -> context -> evidence -> tradeoffs -> practical rule -> ending.
+- Collapse duplicate "main takeaway," "practical conclusion," and "final recommendation" sections into one strong conclusion.
+- Group observations by role, model, product, person, decision rule, or scenario instead of preserving test chronology when that makes the piece clearer.
+- Move definitions and constraints before fine-grained bullets when the reader needs them.
+- Keep uncertainty and scope. Do not turn "better for this workflow" into "best," "ideal," or "production-ready."
+- Prefer a stronger outline over the original paragraph order, while preserving every material fact.
+
+If another draft has a better structure, borrow the structure without borrowing overclaims, hype, emojis, or unsupported certainty.
 
 ---
 
@@ -429,6 +448,7 @@ When rewriting:
 | Pass | What changed | Examples |
 |-|-|-|
 | Structure | Collapsed parallel lists into prose | Sections 1, 4, 6 |
+| Framing | Rebuilt post around one thesis | Hook -> model roles -> routing rule |
 | Inflation | Cut significance/promotional puffery | "pivotal moment" -> deleted |
 | Vocabulary | Cut "navigating" (x3), "journey" (x2) | -> "deal with," "transition" |
 | Grammar | Fixed copula avoidance, -ing phrases | "serves as" -> "is" |
