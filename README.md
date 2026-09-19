@@ -16,7 +16,7 @@ Non-interactive install:
 
 ```bash
 ./install.sh --factory   # ~/.factory/skills/humanize-writing
-./install.sh --codex     # ~/.agents/skills/humanize-writing
+./install.sh --codex     # ~/.codex/skills/humanize-writing
 ./install.sh --claude    # ~/.claude/skills/humanize-writing
 ./install.sh --all       # all supported agents
 ```
@@ -32,6 +32,7 @@ npm install -g @ozerohax/humanize-writing
 - Removes chatbot wrappers like "Here's a more human version" / "Вот более человечная версия".
 - Cuts filler, hedging, vague attributions, promo language, and empty importance.
 - Fixes formulaic structure: identical sections, fake-label lists, ceremonial conclusions.
+- Restructures posts, articles, and reports around one clear reader path instead of preserving raw-note order.
 - Handles Russian-first editing: канцелярит, псевдо-теплота, универсальные заходы, контрастные формулы.
 - Preserves meaning and genre instead of adding fake typos, slang, or staged roughness.
 
@@ -67,7 +68,8 @@ Or delete the installed skill directory:
 
 ```bash
 rm -rf ~/.factory/skills/humanize-writing
-rm -rf ~/.agents/skills/humanize-writing
+rm -rf ~/.codex/skills/humanize-writing
+rm -rf ~/.agents/skills/humanize-writing  # legacy Codex path used by earlier releases
 rm -rf ~/.claude/skills/humanize-writing
 ```
 

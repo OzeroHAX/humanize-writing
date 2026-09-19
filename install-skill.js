@@ -5,6 +5,7 @@ const os = require("os");
 const SKILL_NAME = "humanize-writing";
 const SKILL_DIRS = [
   path.join(os.homedir(), ".factory", "skills", SKILL_NAME),
+  path.join(os.homedir(), ".codex", "skills", SKILL_NAME),
   path.join(os.homedir(), ".agents", "skills", SKILL_NAME),
   path.join(os.homedir(), ".claude", "skills", SKILL_NAME),
   path.join(os.homedir(), ".cursor", "skills", SKILL_NAME),
