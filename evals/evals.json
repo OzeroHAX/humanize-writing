@@ -1,0 +1,91 @@
+{
+  "skill_name": "humanize-writing",
+  "evals": [
+    {
+      "id": 1,
+      "name": "en-blog-slop",
+      "prompt": "This blog post sounds like AI. Humanize it.",
+      "files": [
+        "evals/en-blog-slop.md"
+      ],
+      "expected_output": "Rewrite built around the three real facts (March switch, standup 45->20 min, two of five engineers relocated). Unsupported claims (productivity, global talent, experts) are cut and listed for the author, not replaced with invented numbers or sources. No 'I hope this helps', no chatbot preamble.",
+      "assertions": [
+        "Output contains no numbers, names, studies, or sources absent from the input",
+        "Output does not add first-person anecdotes or feelings the input lacks",
+        "Output keeps 'March', '45', '20', 'two of our five engineers' or equivalent",
+        "Output removes 'I hope this helps', 'In conclusion', 'the future of work is bright', 'leverage', 'myriad', 'seamlessly'",
+        "Reply starts with the rewritten text, not with a preamble like 'Here's a version'",
+        "Cut unsupported claims are listed for the author"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ru-telegram-post",
+      "prompt": "Убери нейросетевость из этого поста для телеграм-канала.",
+      "files": [
+        "evals/ru-telegram-post.md"
+      ],
+      "expected_output": "Russian rewrite that leads with the pilot numbers (38%, 14->3 min, 6% complaints), drops emojis, headline formula, канцелярит, 'важно отметить', 'подводя итог', 'Будущее уже здесь'. The checklist items contradicted by the data ('мгновенно' vs 3 minutes; 'любая нагрузка', 'экономия' with no numbers) are removed and flagged. Grammatical dashes and «ёлочки» are not stripped.",
+      "assertions": [
+        "Output keeps 38%, 14, 3, 6% and 'тарифы' problem",
+        "Output contains no emojis",
+        "Output does not claim 'мгновенно', 'любую нагрузку', or cost savings without data",
+        "Output does not invent new numbers, quotes, or customer stories",
+        "Output does not add slang, typos, or filler words",
+        "Reply is compact: rewrite plus 2-3 notes, no full Changes table"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ru-chat-reply",
+      "prompt": "Сделай этот ответ бота по-человечески, звучит как ChatGPT.",
+      "files": [
+        "evals/ru-chat-reply.md"
+      ],
+      "expected_output": "Short direct answer starting with the command, explaining that the cache is deleted and packages will be re-downloaded. No 'Отличный вопрос', no 'Надеюсь, это поможет', no 'не переживайте', no 'осуществить выполнение'. Reply itself has no 'Вот вариант' wrapper.",
+      "assertions": [
+        "Output keeps 'npm cache clean --force' exactly",
+        "Output removes all assistant openers and closers",
+        "Output removes канцелярит ('осуществить выполнение', 'данная команда')",
+        "Output adds no consequences or caveats beyond 'packages download again' that the input did not state",
+        "Reply does not start with a wrapper like 'Вот вариант' or 'Here is'",
+        "Reply is compact (rewrite plus 2-3 notes)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "en-academic-clean",
+      "prompt": "Can you make this paragraph sound less like AI? It's the related-work section of my paper.",
+      "files": [
+        "evals/en-academic-clean.md"
+      ],
+      "expected_output": "Recognizes that the paragraph is normal academic prose. Makes at most a couple of small edits (e.g. dropping 'In this paper'), keeps every citation, hedge ('suggest'), and number (8,192). Does not add opinions, first person beyond the existing 'we', or informal phrasing. Says explicitly that little needs changing.",
+      "assertions": [
+        "Output keeps all three citations with years unchanged",
+        "Output keeps 'suggest' and '8,192'",
+        "Output does not add opinions, jokes, contractions, or informal openers",
+        "Output states that the text does not read as AI or needs few changes",
+        "Output does not remove the calibrated hedges",
+        "Reply is short; no 8-row Changes table"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "en-article-skeleton",
+      "prompt": "This reads like AI wrote it even though I don't see any buzzwords. Can you humanize it?",
+      "files": [
+        "evals/en-article-skeleton.md"
+      ],
+      "expected_output": "Structure-level edit. The text has few lexical tells; the AI signal is the skeleton (numbered reasons in mirrored paragraphs, 'This post explains what we did, why, and what we learned', a moral conclusion 'architecture decisions are really organizational decisions... weigh both sides carefully'). Expected: keep every number (48 min, 40 engineers, 14 vs 6 months, 4 and 20 min, 4 rotations, 2x incidents, 3 months), delete or drastically shorten the moral ending, break the first/second/third template, keep the author's own verdict ('Probably, but later and smaller') and the mixed result. No invented facts.",
+      "assertions": [
+        "All numbers from the source are preserved",
+        "The 'This post explains what we did, why, and what we learned' roadmap sentence is removed",
+        "The final moral paragraph is removed or reduced to the author's concrete verdict",
+        "The First/Second/Third reason template is broken (not three mirrored paragraphs opening with ordinals)",
+        "The author's verdict 'Probably, but later and smaller' survives in substance",
+        "No new facts, causes, anecdotes, or opinions are added",
+        "Reply notes name structural changes (skeleton, ending), not just word swaps"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,18 @@
 
 Patterns, words, and structures that signal AI-generated content. Organized by category.
 
+Every "alternative" in this file is a shape, not a fact. Replace a hype word with a plain one, or with a specific the source already contains. Never supply the specific yourself.
+
+## Contents
+
+- [Vocabulary: Words AI Overuses](#vocabulary-words-ai-overuses) (Tier 1, Tier 2, CTA verbs)
+- [Phrases: Sentence Starters and Filler](#phrases-sentence-starters-and-filler)
+- [Significance Inflation](#significance-inflation)
+- [Grammar-Level Patterns](#grammar-level-patterns)
+- [Structure: Patterns That Reveal AI](#structure-patterns-that-reveal-ai)
+- [Tone: The AI "Voice"](#tone-the-ai-voice)
+- [Detection Heuristic](#detection-heuristic)
+
 ---
 
 ## Vocabulary: Words AI Overuses
@@ -116,6 +128,7 @@ These are not automatically bad, but they read generated when stacked in heading
 These often appear after "make it sound less AI" prompts. They overcorrect into rehearsed casualness.
 
 - "Here's the thing..." -> State the claim.
+- "Look, ..." -> Delete the opener; keep the sentence.
 - "Let's be real..." -> State the uncomfortable part directly.
 - "Real talk..." -> Delete unless this is genuinely the speaker's voice.
 - "Honestly?" -> Use only when the sentence actually admits something.
@@ -312,21 +325,23 @@ The tell is both frequency and function. Count before flagging -- don't assume d
 
 ## Tone: The AI "Voice"
 
+These are things to recognize and, where the source has the human version, to preserve. None of them is a license to add. Voice belongs to the author (SKILL.md, Rule 0).
+
 ### Too Balanced
 
-AI always presents both sides. Real writers with expertise pick a position and defend it.
+AI always presents both sides. If the source quietly picks a side, lead with that side. If it genuinely doesn't, leave it balanced.
 
 ### Too Positive
 
-AI defaults to optimism. "Exciting developments," "tremendous opportunity," "bright future." Real writing is more measured and occasionally pessimistic.
+AI defaults to optimism and is measurably more positive than human text. "Exciting developments," "tremendous opportunity," "bright future." Cut the optimism that has no fact behind it. Keep any negative affect the author wrote ("miserable" stays "miserable").
 
 ### Too Smooth
 
-AI never stumbles, pauses, or doubles back. Real writing has slight roughness -- a parenthetical aside, a sentence that starts one way and pivots, a blunt statement after a complex one.
+AI never stumbles, pauses, or doubles back. Real writing has slight roughness -- a parenthetical aside, a sentence that pivots, a blunt statement after a complex one. Keep every such moment the author wrote and don't smooth it away. Don't manufacture any.
 
 ### No Personality
 
-AI doesn't have opinions, pet peeves, or a sense of humor. Adding these (sparingly) makes writing feel authored by someone real.
+AI doesn't have opinions, pet peeves, or a sense of humor. If the draft contains the author's, they're usually buried under padding; surface them. If it contains none, the text stays neutral, which is more honest than an invented voice.
 
 ### Anti-AI Camouflage
 
@@ -338,7 +353,7 @@ Some rewrites try to prove they are human with forced typos, random slang, awkwa
 
 ## Detection Heuristic
 
-Score the piece on these dimensions. 5+ hits = likely AI-generated:
+Score the piece on these dimensions. 5+ hits = likely AI-generated. Two exceptions: in academic, legal, and technical reference writing, ignore the "no informal language," "no opinions," and "hedged claims" items, since the genre requires exactly that. And never report an authorship verdict to the user; report the patterns.
 
 - [ ] Uses 3+ Tier 1 vocabulary words
 - [ ] Uses 5+ Tier 2 vocabulary words
